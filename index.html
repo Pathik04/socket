@@ -7,6 +7,12 @@
 </head>
 <body>
     <p>Hello</p>
-    <script src=""/socket.io/socket.io.js ></script>
+    <script src="/socket.io/socket.io.js" ></script>
+    <script type="module">
+        const socket=io()
+        socket.on('connect',()=>{
+            console.log("Connected to the (client) ✅");
+        })
+    </script>
 </body>
 </html>
