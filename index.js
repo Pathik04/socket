@@ -19,7 +19,9 @@ app.get('/',(req,res)=>res.sendFile(join(__dirname,'index.html')))
 
 
 //Define an connection event handler
-
+io.on('connection',(socket)=>{
+    console.log("User connected to (server) ✅");
+})
 
 
 //start the server
