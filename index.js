@@ -19,9 +19,9 @@ app.get('/', (req, res) => res.sendFile(join(__dirname, 'index.html')))
 
 
 //Define an connection event handler
-io.on('connection', (client) => {
+io.on('connection', (client_one) => {  // disconnecting a specific client fromthe server
     console.log("User connected to (server) ✅");
-    client.on('disconnect', () => {
+    client_one.on('disconnect', () => {
         console.log('User Disconnected from (Server)❌');
     })
 })
